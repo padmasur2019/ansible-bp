@@ -1,7 +1,7 @@
 - name: Coreate abd empty file
   hosts: testonlyhost
   tasks: 
-    - name: One simple task
+    - name: old one
       ansible.windows.win_file:
         path: C:\aocc\renamed-foo.conf
         state: touch
