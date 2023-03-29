@@ -1,8 +1,7 @@
 - name: Get tasklist
   hosts: VM_Host
   tasks: 
-    - name: One simple task
+    - name: List tasks
       ansible.windows.win_command: 
         cmd: 'tasklist  /fi "IMAGENAME eq automata.exe"'
-        path: C:\aocc\renamed-foo.conf
-        state: touch
+        
