@@ -1,0 +1,7 @@
+- name: Get tasklist
+  hosts: VM_Host
+  tasks: 
+    - name: One simple task
+      ansible.windows.win_file:
+        path: C:\aocc\renamed-foo.conf
+        state: touch
