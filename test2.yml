@@ -14,4 +14,4 @@
     - name: run tasklistto find automata.exe
       raw: tasklist  /fi "IMAGENAME eq automata.exe"
       register: tlist
-    -debug: var=tlist
+    - debug: var=tlist
