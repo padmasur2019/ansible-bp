@@ -15,6 +15,6 @@
     - name: start automate.exe
       ansible.windows.win_command: 
         chdir: 'C:\Program Files\Blue Prism Limited\Blue Prism Automate' 
-        cmd: start "Automates.exe"
+        cmd: start "C:\Program Files\Blue Prism Limited\Blue Prism Automate\Automates.exe"
       register: rest
     - debug: var=rest
