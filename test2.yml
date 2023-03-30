@@ -8,7 +8,7 @@
       raw: tasklist  /fi "IMAGENAME eq automate.exe" 
       register: tlist
     - debug: var=tlist
-     - name: kill automata.exe
+    - name: kill automata.exe
       raw: taskkill  /fi "IMAGENAME eq automate.exe" 
       register: tkill
     - debug: var=tkill
