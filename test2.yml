@@ -3,12 +3,12 @@
   tasks: 
     - name: List tasks
       ansible.windows.win_command: 
-        cmd: 'tasklist  /fi "IMAGENAME eq automate.exe"'    
-    - name: run ipconfig
-      raw: ipconfig
-      register: ipconfig
-    - debug: var=ipconfig
+        cmd: 'tasklist  /fi "IMAGENAME eq automate.exe"'   
     - name: run tasklist to find automata.exe
       raw: tasklist  /fi "IMAGENAME eq automate.exe" 
       register: tlist
     - debug: var=tlist
+     - name: kill automata.exe
+      raw: taskkill  /fi "IMAGENAME eq automate.exe" 
+      register: tkill
+    - debug: var=tkill

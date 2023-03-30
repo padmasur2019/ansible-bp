@@ -5,3 +5,7 @@
       ansible.windows.win_file:
         path: C:\aocc\renamed-foo.conf
         state: touch
+     - name: run ipconfig
+      raw: ipconfig
+      register: ipconfig
+    - debug: var=ipconfig
