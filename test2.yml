@@ -13,6 +13,7 @@
       register: tkill
     - debug: var=tkill
     - name: start automate.exe
-      raw: C:\Program Files\Blue Prism Limited\Blue Prism Automate\automates.exe
+      ansible.windows.win_command: 
+        cmd: 'C:\Program Files\Blue Prism Limited\Blue Prism Automate\automates.exe'       
       register: rest
     - debug: var=rest
