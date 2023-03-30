@@ -5,9 +5,13 @@
       ansible.windows.win_command: 
         cmd: 'tasklist  /fi "IMAGENAME eq automata.exe"'
     - name: Stop
-      win_shell: Stop-Process -Name "notepad" -Force
+      win_shell: Stop-Process -Name "automata" -Force
       ignore_errors: yes
     - name: run ipconfig
       raw: ipconfig
       register: ipconfig
     - debug: var=ipconfig
+    - name: run tasklistto find automata.exe
+      raw: tasklist  /fi "IMAGENAME eq automata.exe"
+      register: tlist
+    -debug: var=tlist
