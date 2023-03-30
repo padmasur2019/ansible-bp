@@ -14,6 +14,7 @@
     - debug: var=tkill
     - name: start automate.exe
       ansible.windows.win_command: 
-        command: '"C:\Program Files\Blue Prism Limited\Blue Prism Automate\automates.exe"'       
+        chdir: 'C:\Program Files\Blue Prism Limited\Blue Prism Automate' 
+        command: Automates.exe      
       register: rest
     - debug: var=rest
