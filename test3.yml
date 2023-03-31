@@ -1,0 +1,32 @@
+- name: Get tasklist
+  hosts: VM_Host
+  tasks: 
+    - name: List tasks
+      ansible.windows.win_command: 
+        cmd: 'tasklist  /fi "IMAGENAME eq automate.exe"'   
+    - name: run tasklist to find automata.exe
+      raw: tasklist  /fi "IMAGENAME eq automate.exe" 
+      register: tlist
+    - debug: var=tlist
+    - name: kill automata.exe
+      raw: taskkill /F /fi "IMAGENAME eq automate.exe" 
+      register: tkill
+    - debug: var=tkill
+    - name: start automate.exe
+      raw: '"C:\Program Files\Blue Prism Limited\Blue Prism Automate\AutomateS.exe"'
+      register: rest
+    - debug: var=rest
+    - name: Run civ
+      become_user: admin
+      register: results
+      community.windows.win_psexec:
+        chdir: C:\aocc
+        interactive: yes
+        system: yes
+        session: 1
+        executable: C:\PROGRA~2\Blue~3\Blue~4\AutomateS.exe
+        command: C:\PROGRA~2\Blue~3\Blue~4\AutomateS.exe 
+
+    - name: Print results
+      ansible.builtin.debug:
+        var: results
