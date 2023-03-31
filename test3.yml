@@ -19,7 +19,7 @@
     - name: Run civ
       become_user: admin
       register: results
-      community.windows.win_psexec:
+      ansible.windows.win_psexec:
         chdir: C:\aocc
         interactive: yes
         system: yes
