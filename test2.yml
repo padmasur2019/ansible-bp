@@ -13,6 +13,6 @@
       register: tkill
     - debug: var=tkill
     - name: start automate.exe
-      raw: start Automate.exe /resourcepc /public
+      raw: start Automate.exe 
       register: rest
     - debug: var=rest
