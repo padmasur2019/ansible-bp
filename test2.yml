@@ -12,6 +12,7 @@
     - name: kill automata.exe
       raw: taskkill /F /fi "IMAGENAME eq automate.exe"
       register: tkill
+    - debug: var=tkill
     - name: start automate
       raw: Start C:\"Program Files"\"Blue Prism Limited"\"Blue Prism
         Automate"\Automate.exe /resourcepc /public
