@@ -15,5 +15,3 @@
     - debug: var=tkill
     - name: to start bp
       raw: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList “/resourcepc”,“/public”
-      register: rest
-    - debug: var=rest
