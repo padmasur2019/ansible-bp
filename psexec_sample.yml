@@ -1,6 +1,8 @@
----
-- name: Run psexec  
-  tasks:
-    - name: Run a cmd.exe command from playbook
-      community.windows.psexec: 
-        hostname: 10.165.18.72
+- name: Run the automata.exe
+  community.windows.win_psexec:
+    command: C:\"Program Files"\"Blue Prism Limited"\"Blue Prism Automate"\Automate.exe /resourcepc /public
+    hostnames:
+    - 10.165.18.72
+    username: AD\snchapar
+    password: 2023IsNotALeapYear@@
+    priority: high
