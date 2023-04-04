@@ -3,7 +3,7 @@
   hosts: VM_Host
   tasks:
     - name: List tasks
-      ansible.windows.win_command:
+      ansible.windows.win_shell:
         cmd: tasklist  /fi "IMAGENAME eq automate.exe"
     - name: run tasklist to find automata.exe
       raw: tasklist  /fi "IMAGENAME eq automate.exe"
