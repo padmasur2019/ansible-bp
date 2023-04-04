@@ -1,0 +1,3 @@
+- name: Run a cmd.exe command
+  community.windows.psexec:
+    hostname: 10.165.18.72
