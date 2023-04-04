@@ -1,5 +1,5 @@
 - name: Run the automata.exe
-  community.windows.win_psexec:
+  ansible.windows.win_psexec:
     command: C:\"Program Files"\"Blue Prism Limited"\"Blue Prism Automate"\Automate.exe /resourcepc /public
     hostnames:
     - 10.165.18.72
