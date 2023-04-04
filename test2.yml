@@ -19,9 +19,4 @@
         “/resourcepc”,“/public”
       register: tstart
     - debug: var=tstart
-    - name: to start notepad
-      raw: Start-Process -FilePath "notepad.exe” -WorkingDirectory
-        ‘C:\Users\snchapar\AppData\Roaming\Microsoft\Windows\Start
-        Menu\Programs\Accessories\’
-      register: tnote
-    - debug: var=tnote
+   
