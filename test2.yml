@@ -23,10 +23,10 @@
       ansible.windows.win_shell: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
         Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
         “/resourcepc”,“/public” >> C:\aocc\log.txt
-    - name: start automate
+    - name: start automate thru exec
       ansible.windows.win_shell: echo %HOMEDIR%
       args:
-      executable: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
+      executable: Start -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
         Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
         “/resourcepc”,“/public”
       register: homedir_out
