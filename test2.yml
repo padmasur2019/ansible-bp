@@ -3,7 +3,7 @@
   hosts: VM_Host
   tasks:
     - name: List tasks
-      ansible.windows.win_shell:
+      ansible.windows.win_command:
         cmd: tasklist  /fi "IMAGENAME eq automate.exe"
     - name: run tasklist to find automata.exe
       raw: tasklist  /fi "IMAGENAME eq automate.exe"
@@ -19,4 +19,9 @@
         “/resourcepc”,“/public”
       register: tstart
     - debug: var=tstart
+    - name: start automate
+      ansible.windows.win_shell: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
+        Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
+        “/resourcepc”,“/public”
+     
    
