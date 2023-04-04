@@ -3,4 +3,4 @@
   tasks:
     - name: Run a cmd.exe command from playbook
       community.windows.psexec: 
-      hostname: 10.165.18.72
+        hostname: 10.165.18.72
