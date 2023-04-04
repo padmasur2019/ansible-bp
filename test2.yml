@@ -27,7 +27,8 @@
       ansible.windows.win_shell: echo %HOMEDIR%
       args:
       executable: Start -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
-        Files\Blue Prism Limited\Blue Prism Automate\’
+        Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
+        “/resourcepc”,“/public”
       register: homedir_out
     - debug: var=homedir_out
 
