@@ -1,7 +1,6 @@
 ---
-- name: Run psexec
-  hosts: VM_Host
+- name: Run psexec  
   tasks:
     - name: Run a cmd.exe command from playbook
-      community.windows.psexec: null
+      community.windows.psexec: 
       hostname: 10.165.18.72
