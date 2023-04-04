@@ -22,6 +22,6 @@
     - name: start automate
       ansible.windows.win_shell: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
         Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
-        “/resourcepc”,“/public”
+        “/resourcepc”,“/public” >> C:\aocc\log.txt
      
    
