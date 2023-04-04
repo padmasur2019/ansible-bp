@@ -14,10 +14,14 @@
       register: tkill
     - debug: var=tkill
     - name: to start bp
-      raw: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList “/resourcepc”,“/public”
+      raw: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
+        Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
+        “/resourcepc”,“/public”
       register: tstart
     - debug: var=tstart
     - name: to start notepad
-      raw: Start-Process -FilePath "notepad.exe” -WorkingDirectory ‘C:\Users\snchapar\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\’  -ArgumentList “/resourcepc”,“/public”
+      raw: Start-Process -FilePath "notepad.exe” -WorkingDirectory
+        ‘C:\Users\snchapar\AppData\Roaming\Microsoft\Windows\Start
+        Menu\Programs\Accessories\’  -ArgumentList “/resourcepc”,“/public”
       register: tnote
     - debug: var=tnote
