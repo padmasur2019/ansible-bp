@@ -33,6 +33,7 @@
       win_shell: C:\aocc\runserver.bat
       register: result
       ignore_errors: yes
+      become: yes
     - name: Display output
       debug:
         var: result.stdout_lines
