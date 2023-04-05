@@ -33,7 +33,7 @@
       win_shell: C:\aocc\runserver.bat
       register: result
       ignore_errors: yes
-      become_method: runas
+      become_method: sudo
       become: yes
     - name: Display output
       debug:
