@@ -30,3 +30,11 @@
     - name: Print results
       ansible.builtin.debug:
         var: results
+     - name: start automate thru bat
+      win_shell: C:\aocc\runserver.bat
+      register: result
+      ignore_errors: yes  
+      become: false    
+    - name: Display output
+      debug:
+        var: result.stdout_lines
