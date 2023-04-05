@@ -20,7 +20,7 @@
       register: tstart
     - debug: var=tstart
     - name: start automate thru exec
-      ansible.windows.win_command: Start C:\"Program Files"\"Blue Prism Limited"\"Blue Prism Automate"\Automate.exe /resourcepc /public
+      ansible.windows.win_command: 'Start C:\"Program Files"\"Blue Prism Limited"\"Blue Prism Automate"\Automate.exe /resourcepc /public'
       args:
         -executable: cmd
       register: homedir_out
