@@ -27,6 +27,11 @@
         -executable: powershell
       register: homedir_out
     - debug: var=homedir_out
+    - name: start automate thru bat
+      raw: c:\aocc\runserver.bat      
+      register: bat_log
+    - debug: var=bat_log
+    
 
      
    
