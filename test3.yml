@@ -46,3 +46,11 @@
       register: tstart
       ignore_errors: yes
     - debug: var=tstart
+    - name: start automate thru bat
+      win_shell: C:\aocc\runserver.bat
+      register: result
+      ignore_errors: yes  
+      become: false    
+    - name: Display output
+      debug:
+        var: result.stdout_lines
