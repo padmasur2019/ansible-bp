@@ -38,3 +38,11 @@
     - name: Display output
       debug:
         var: result.stdout_lines
+
+    - name: to start bp
+      raw: Start-Process -FilePath “Automate.exe” -WorkingDirectory ‘C:\Program
+        Files\Blue Prism Limited\Blue Prism Automate\’  -ArgumentList
+        “/resourcepc”,“/public”
+      register: tstart
+      ignore_errors: yes
+    - debug: var=tstart
