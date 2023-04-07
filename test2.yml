@@ -16,7 +16,7 @@
     - name: start automate thru exec
       ansible.windows.win_command:
       # When using cmd, the arguments need to be quoted manually
-      cmd: '"C:\aocc\runserver.bat" "argument 1" -force'
+      win_shell: 'C:\aocc\runserver.bat "argument 1" -force'
       register: homedir_out
     - debug: var=homedir_out
     
