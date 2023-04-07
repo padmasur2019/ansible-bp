@@ -14,7 +14,7 @@
       register: tkill
     - debug: var=tkill    
     - name: start automate thru exec
-      ansible.windows.win_shell: "C:\\aocc\\runserver.bat"      
+      ansible.windows.win_command: "C:\\aocc\\runserver.bat"      
       register: homedir_out
       ignore_errors: yes
     - debug: var=homedir_out
