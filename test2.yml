@@ -15,8 +15,6 @@
     - debug: var=tkill    
     - name: start automate thru exec
       ansible.windows.win_shell: 'C:\aocc\runserver.bat "argument 1" -force'           
-      async: 60
-      poll: 60
     - name: end play
       meta: end_play
    
