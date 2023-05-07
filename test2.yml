@@ -1,6 +1,6 @@
 ---
 - name: Get tasklist
-  hosts: VM_Host
+  hosts: VM_Host*
   tasks:
     - name: List tasks
       ansible.windows.win_command:
